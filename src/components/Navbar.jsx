@@ -38,7 +38,7 @@ const Navbar = () => {
                 <div className='group relative'>
                     <img onClick={() => { navigate('/login') }} className='w-5 cursor-pointer' src={assets.profile_icon} alt="" />
 
-                    {/* Padajući menu */}
+                    {/* Dropdown Menu */}
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
                         <div className='flex flex-col gap-2 w-36 py-3 px-5  bg-slate-100 text-gray-500 rounded'>
                             <p onClick={() => { }} className='cursor-pointer hover:text-black'>My Profile</p>
@@ -49,12 +49,12 @@ const Navbar = () => {
                 </div>
                 <Link to='/cart' className='relative'>
                     <img className='w-5 min-w-5' src={assets.cart_icon} alt="" />
-                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'></p>
+                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{getCartCount()}</p>
                 </Link>
                 <img onClick={() => setVisble(true)} className='w-5 cursor-pointer sm:hidden' src={assets.menu_icon} alt="" />
             </div>
 
-            {/* Menu za mobitele i male ekrane */}
+            {/* Sidebar Menu For Small Screens */}
             <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`} >
                 <div className='flex flex-col text-gray-600'>
                     <div onClick={() => setVisble(false)} className='flex items-center gap-4 p-3 '>
