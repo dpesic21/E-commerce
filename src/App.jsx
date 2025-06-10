@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import './index.css';
+import Footer from './components/Footer'
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/place-order' element={<PlaceOrder />} />
         <Route path='/orders' element={<Orders />} />
       </Routes>
+      <Footer/>
     </div>
   )
 }
